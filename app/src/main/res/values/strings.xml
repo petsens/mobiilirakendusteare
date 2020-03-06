@@ -1,0 +1,21 @@
+<resources>
+    <!--  put all title strings here  -->
+    <string name="app_name">Tujupäevik</string>
+    <string name="mainTitle">Tujupäevik</string>
+    <string name="moodTitle">Mis tuju on?</string>
+    <string name="feelingsTitle">Miks ma nii tunnen?</string>
+    <string name="tempoTitle">Mis tempoga ma sõidan?</string>
+    <string name="fuelTitle">Kui palju energiat mul on?</string>
+    <string name="resultsTitle">Kuidas mul läinud on?</string>
+
+    <string name="submitBtnText">Kinnita</string>
+    <string name="homeBtnText">Avalehele</string>
+    <string name="landingMoodBtnText">Alusta</string>
+    <string name="landingResBtnText">Tulemused</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+</resources>
