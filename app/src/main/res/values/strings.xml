@@ -2,7 +2,7 @@
     <!--  put all title strings here  -->
     <string name="app_name">Tujupäevik</string>
     <string name="mainTitle">Tujupäevik</string>
-    <string name="moodTitle">Mis tuju on?</string>
+    <string name="moodTitle">Mis tunne on?</string>
     <string name="feelingsTitle">Miks ma nii tunnen?</string>
     <string name="tempoTitle">Mis tempoga ma sõidan?</string>
     <string name="fuelTitle">Kui palju energiat mul on?</string>
@@ -12,6 +12,14 @@
     <string name="homeBtnText">Avalehele</string>
     <string name="landingMoodBtnText">Alusta</string>
     <string name="landingResBtnText">Tulemused</string>
+    <string name="angryMoodBtnText">Vihane</string>
+    <string name="anxiousMoodBtnText">Ärevil</string>
+    <string name="excitedMoodBtnText">Elevil</string>
+    <string name="happyMoodBtnText">Rõõmus</string>
+    <string name="sadMoodBtnText">Kurb</string>
+    <string name="scaredMoodBtnText">Hirmul</string>
+    <string name="calmMoodBtnText">Rahulik</string>
+    <string name="restedMoodBtnText">Puhanud</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

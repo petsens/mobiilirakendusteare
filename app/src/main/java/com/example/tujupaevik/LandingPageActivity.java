@@ -4,42 +4,49 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
-import android.widget.Button;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class LandingPageActivity extends AppCompatActivity {
-    private Button resBtn;
-    private Button moodBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
-
-        resBtn = (Button) findViewById(R.id.landingResBtn);
-        resBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openResultsPage();
-            }
-        });
-
-        moodBtn = (Button) findViewById(R.id.landingMoodBtn);
-        moodBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMoodPage();
-            }
-        });
+        try {
+            createStorage();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    public void openResultsPage() {
+    public void openResultsPage(View v) {
         Intent intent = new Intent(this, ResultsPageActivity.class);
         startActivity(intent);
     }
 
-    public void openMoodPage() {
+    public void openMoodPage(View v) {
         Intent intent = new Intent(this, MoodPageActivity.class);
         startActivity(intent);
+    }
+
+    private void createStorage() throws IOException {
+        String fileName = "tujuStorage.json";
+        File file = new File(Environment.getDataDirectory(), fileName);
+        FileWriter fileWriter;
+        BufferedWriter bufferedWriter;
+
+        if(!file.exists()) {
+            file.createNewFile();
+            fileWriter = new FileWriter(file.getAbsoluteFile());
+            bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write("{}");
+            bufferedWriter.close();
+        }
     }
 }

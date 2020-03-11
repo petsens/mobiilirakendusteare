@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import com.example.tujupaevik.ui.main.MainFragment;
 
+
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_TIME_OUT = 3000;
 
@@ -25,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         }, SPLASH_TIME_OUT);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow();
+                .replace(R.id.container, MainFragment.newInstance())
+                .commitNow();
         }
     }
 }

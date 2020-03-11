@@ -23,16 +23,105 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/moodSubBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginLeft="161dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginRight="162dp"
-        android:layout_marginBottom="48dp"
-        android:text="@string/submitBtnText"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/moodSelect"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/angryMoodBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/moodSelect2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/moodSelect2"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/anxiousMoodBtnText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect" />
+
+    <Button
+        android:id="@+id/moodSelect3"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/excitedMoodBtnText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/moodSelect4"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/happyMoodBtnText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect3" />
+
+    <Button
+        android:id="@+id/moodSelect5"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/sadMoodBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/moodSelect8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect2" />
+
+    <Button
+        android:id="@+id/moodSelect6"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/calmMoodBtnText"
+        app:layout_constraintBottom_toTopOf="@+id/moodSelect7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect4" />
+
+    <Button
+        android:id="@+id/moodSelect7"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/restedMoodBtnText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect6" />
+
+    <Button
+        android:id="@+id/moodSelect8"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="82dp"
+        android:layout_marginLeft="82dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onMoodSelect"
+        android:text="@string/scaredMoodBtnText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moodSelect5" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

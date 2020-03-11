@@ -5,27 +5,46 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class ResultsPageActivity extends AppCompatActivity {
-    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_page);
-
-        button = (Button) findViewById(R.id.resultsHomeBtn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
+        displayData();
     }
 
-    public void openHomePage() {
+    public void openHomePage(View v) {
         Intent intent = new Intent(this, LandingPageActivity.class);
         startActivity(intent);
+    }
+
+    private void displayData() {
+        String fileName = "tujuStorage.json";
+        File file = new File(this.getFilesDir(), fileName);
+        StringBuilder text = new StringBuilder();
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+
+            while ((line = br.readLine()) != null) {
+                text.append(line);
+                text.append('\n');
+            }
+            br.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+        TextView tv = findViewById(R.id.textView7);
+        tv.setText(text.toString());
     }
 }
