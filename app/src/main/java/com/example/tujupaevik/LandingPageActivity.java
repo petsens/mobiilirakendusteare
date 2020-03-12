@@ -37,7 +37,7 @@ public class LandingPageActivity extends AppCompatActivity {
 
     private void createStorage() throws IOException {
         String fileName = "tujuStorage.json";
-        File file = new File(Environment.getDataDirectory(), fileName);
+        File file = new File(this.getFilesDir(), fileName);
         FileWriter fileWriter;
         BufferedWriter bufferedWriter;
 
