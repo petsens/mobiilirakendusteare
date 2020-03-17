@@ -9,3 +9,7 @@ Vaated:
 4. Kui kiire mul on  
 5. Palju energiat on  
 6. Kuidas mul läinud on  
+
+![Disaini mockupid](https://github.com/petsens/mobiilirakendusteare/blob/master/Tujupaevik_mobiilirakendus_mockups.png)
+
+Esialgne kavand: https://www.figma.com/file/XXStMrgNGjNksw7LjSuccQUn/Tujup%C3%A4evik?node-id=0%3A1
