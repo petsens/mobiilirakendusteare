@@ -32,6 +32,7 @@
         android:layout_marginBottom="20dp"
         android:onClick="onMoodSelect"
         android:text="@string/angryMoodBtnText"
+        android:tag="angry"
         app:layout_constraintBottom_toTopOf="@+id/moodSelect2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -45,6 +46,7 @@
         android:layout_marginTop="20dp"
         android:onClick="onMoodSelect"
         android:text="@string/anxiousMoodBtnText"
+        android:tag="anxious"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect" />
 
@@ -57,6 +59,7 @@
         android:layout_marginRight="82dp"
         android:onClick="onMoodSelect"
         android:text="@string/excitedMoodBtnText"
+        android:tag="excited"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -69,6 +72,7 @@
         android:layout_marginRight="82dp"
         android:onClick="onMoodSelect"
         android:text="@string/happyMoodBtnText"
+        android:tag="happy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect3" />
 
@@ -82,6 +86,7 @@
         android:layout_marginBottom="20dp"
         android:onClick="onMoodSelect"
         android:text="@string/sadMoodBtnText"
+        android:tag="sad"
         app:layout_constraintBottom_toTopOf="@+id/moodSelect8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect2" />
@@ -96,6 +101,7 @@
         android:layout_marginBottom="20dp"
         android:onClick="onMoodSelect"
         android:text="@string/calmMoodBtnText"
+        android:tag="calm"
         app:layout_constraintBottom_toTopOf="@+id/moodSelect7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect4" />
@@ -109,6 +115,7 @@
         android:layout_marginRight="82dp"
         android:onClick="onMoodSelect"
         android:text="@string/restedMoodBtnText"
+        android:tag="rested"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect6" />
 
@@ -121,6 +128,7 @@
         android:layout_marginTop="20dp"
         android:onClick="onMoodSelect"
         android:text="@string/scaredMoodBtnText"
+        android:tag="scared"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moodSelect5" />
 
