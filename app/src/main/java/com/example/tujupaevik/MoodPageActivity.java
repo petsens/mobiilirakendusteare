@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
-
 import org.json.JSONException;
 import java.io.IOException;
 
@@ -57,8 +56,23 @@ public class MoodPageActivity extends AppCompatActivity {
                 break;
         }
 
-        addDataToFile("Mood", moodData, this.getFilesDir());
+        SaveTodaysMood(moodData);
         Intent intent = new Intent(this, FeelingsPageActivity.class);
         startActivity(intent);
+    }
+
+    public void SaveTodaysMood(String dataToSave) {
+        try {
+            Functions.addDataToFile("Mood", dataToSave, this.getFilesDir());
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

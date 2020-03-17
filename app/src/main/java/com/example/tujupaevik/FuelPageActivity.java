@@ -12,6 +12,8 @@ import org.json.JSONException;
 
 import java.io.IOException;
 
+import static com.example.tujupaevik.Functions.addDataToFile;
+
 public class FuelPageActivity extends AppCompatActivity {
     private String energyData;
 
@@ -45,8 +47,23 @@ public class FuelPageActivity extends AppCompatActivity {
     }
 
     public void openResultsPage(View v) throws IOException, JSONException {
-        Functions.addDataToFile("Fuel", energyData, this.getFilesDir());
+        SaveTodaysFuel(energyData);
         Intent intent = new Intent(this, ResultsPageActivity.class);
         startActivity(intent);
+    }
+
+    public void SaveTodaysFuel(String dataToSave) {
+        try {
+            Functions.addDataToFile("Fuel", dataToSave, this.getFilesDir());
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+        catch (JSONException e) {
+            e.printStackTrace();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
