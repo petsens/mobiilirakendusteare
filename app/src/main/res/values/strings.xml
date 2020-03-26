@@ -1,7 +1,9 @@
 <resources>
     <!--  put all title strings here  -->
     <string name="app_name">Tujupäevik</string>
-    <string name="mainTitle">Tujupäevik</string>
+    <string name="mainTitle">TUJU</string>
+    <string name="mainTitleLanding">Tujupäevik</string>
+    <string name="mainTitle2">päevik</string>
     <string name="moodTitle">Mis tunne on?</string>
     <string name="feelingsTitle">Miks ma nii tunnen?</string>
     <string name="tempoTitle">Mis tempoga ma sõidan?</string>
