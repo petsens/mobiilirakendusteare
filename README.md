@@ -13,6 +13,7 @@ Vaated:
 ![Disaini mockupid](https://github.com/petsens/mobiilirakendusteare/blob/master/Tujupaevik_mobiilirakendus_mockups.png)
 
 Esialgne kavand: https://www.figma.com/file/XXStMrgNGjNksw7LjSuccQUn/Tujup%C3%A4evik?node-id=0%3A1
+Kujustus: https://www.figma.com/file/ZtzGUW2zeUcnFibimJVFhZ/AndroidDesign?node-id=0%3A1
   
 Documentation:
 Function 'addDataToFile' takes into 1th parameter following strings: Mood, Reason, Tempo or Fuel  
