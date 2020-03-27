@@ -11,26 +11,36 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="45dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="@string/fuelTitle"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#18314F"
+        android:maxWidth="350dp"
+        android:gravity="center_horizontal"
+        android:textSize="36sp"/>
 
     <Button
         android:id="@+id/fuelSubBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
+        android:layout_width="140dp"
+        android:layout_height="51dp"
         android:text="@string/submitBtnText"
         android:onClick="openResultsPage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="24sp"
+        android:textColor="#D6E3FC"
+        android:layout_marginLeft="132dp"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/montserrat"/>
 
     <SeekBar
         android:id="@+id/energyBar"
@@ -52,7 +62,9 @@
         app:layout_constraintHorizontal_bias="0.59"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.365"
+        android:textColor="#18314F"
+        android:fontFamily="@font/montserrat"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
