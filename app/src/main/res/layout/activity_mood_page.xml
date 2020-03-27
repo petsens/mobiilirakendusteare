@@ -35,10 +35,11 @@
         android:layout_marginBottom="66dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
+        android:textColor="#D6E3FC"
         android:onClick="onMoodSelect"
         android:tag="angry"
         android:text="@string/angryMoodBtnText"
-        android:textColor="#D6E3FC"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/moodSelect2"
         app:layout_constraintStart_toStartOf="parent"
