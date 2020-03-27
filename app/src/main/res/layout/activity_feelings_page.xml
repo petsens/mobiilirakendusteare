@@ -200,7 +200,6 @@
         android:tag="@string/accomplishment"
         android:text="@string/accomplishment"
         android:textColor="#D6E3FC"
-        android:textPa
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
