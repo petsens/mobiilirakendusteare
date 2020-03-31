@@ -14,12 +14,17 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
+import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
+import com.github.mikephil.charting.formatter.DefaultAxisValueFormatter;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -54,7 +59,7 @@ public class ResultsPageActivity extends AppCompatActivity {
         ArrayList Moods = new ArrayList();
         ArrayList Tempos = new ArrayList();
         ArrayList Fuels = new ArrayList();
-        ArrayList Days = new ArrayList();
+        final ArrayList<String> Days = new ArrayList<>();
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -125,14 +130,12 @@ public class ResultsPageActivity extends AppCompatActivity {
                         }
 
                         mood = mood / moodCount;
-                        tempo = tempo / tempoCount;
-                        fuel = fuel / fuelCount;
+                        tempo = (tempo / tempoCount) / 100 * 8;
+                        fuel = (fuel / fuelCount) / 100 * 8;
 
-                        float moodOffset = dayCount * 2;
-                        float tempoOffset = moodOffset + 0.3f;
-                        float fuelOffset = tempoOffset + 0.3f;
-
-                        //text.append("daycount "+dayCount+" mo "+moodOffset+" to "+tempoOffset+" fo "+fuelOffset+"\n");
+                        float moodOffset = dayCount + 5f;
+                        float tempoOffset = moodOffset + 5f;
+                        float fuelOffset = tempoOffset + 5f;
 
                         Moods.add(new BarEntry(moodOffset, mood));
                         Tempos.add(new BarEntry(tempoOffset, tempo));
@@ -156,11 +159,18 @@ public class ResultsPageActivity extends AppCompatActivity {
         BarDataSet tempoBarDataSet = new BarDataSet(Tempos, "Tempo");
         BarDataSet energyBarDataSet = new BarDataSet(Fuels, "Energia");
 
-        moodBarDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
-        tempoBarDataSet.setColors(ColorTemplate.PASTEL_COLORS);
-        energyBarDataSet.setColors(ColorTemplate.LIBERTY_COLORS);
+        int[] moodColors = new int[1];
+        int[] tempoColors = new int[1];
+        int[] fuelColors = new int[1];
 
-        moodBarDataSet.setFormLineWidth(2);
+        moodColors[0] = 2936174;
+        tempoColors[0] = 1290224;
+        fuelColors[0] = 15744886;
+
+        moodBarDataSet.setColors(new int[] { R.color.moodBar});
+        tempoBarDataSet.setColors(new int[] { R.color.tempoBar});
+        energyBarDataSet.setColors(new int[] { R.color.fuelBar});
+
         tempoBarDataSet.setFormLineWidth(2);
         moodBarDataSet.setFormLineWidth(3);
 
@@ -172,10 +182,22 @@ public class ResultsPageActivity extends AppCompatActivity {
         chart.animateY(500);
 
         Description desc = new Description();
-        desc.setText("Sisestatud tujud");
+        desc.setText(" ");
         chart.setDescription(desc);
 
         BarData fullStats = new BarData(datasets);
         chart.setData(fullStats);
+
+        XAxis xAxis = chart.getXAxis();
+
+        xAxis.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value, AxisBase axis) {
+                return Days.get((int) value)+" asd";
+            }
+        });
+
+        //xAxis.setValueFormatter(new DaysValueFormatter());
+
     }
 }

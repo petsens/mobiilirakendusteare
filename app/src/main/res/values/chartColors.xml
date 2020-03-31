@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="moodBar">#30c552</color>
+    <color name="tempoBar">#5f83cd</color>
+    <color name="fuelBar">#d34a58</color>
+</resources>
