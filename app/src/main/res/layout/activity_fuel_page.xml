@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.365"
-        android:textColor="#18314F"
+        android:textColor="@color/colorPrimary"
         android:fontFamily="@font/montserrat"/>
 
 
