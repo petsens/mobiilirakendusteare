@@ -70,7 +70,7 @@ public class ResultsPageActivity extends AppCompatActivity {
                     JSONObject fullData = new JSONObject(line);
                     Iterator<String> days = fullData.keys();
 
-                    while (days.hasNext()) {
+                    while (days.hasNext()) { // Data inserted into 1 day.
                         String day = days.next();
                         Days.add(day);
                         dayCount++;
@@ -86,13 +86,13 @@ public class ResultsPageActivity extends AppCompatActivity {
                         int tempoCount = 0;
                         int fuelCount = 0;
 
-                        while (dayDataKeys.hasNext()) {
+                        while (dayDataKeys.hasNext()) { // Going over all object properties because we can't do someObject.myPropertyName
                             String dayProperty = dayDataKeys.next();
                             JSONArray arr = (JSONArray) dayData.get(dayProperty);
 
                             switch (dayProperty) {
                                 case "mood": {
-                                    for(int f = 0; f < arr.length(); f++) {
+                                    for(int f = 0; f < arr.length(); f++) { // Cycling over all moods inserted into 1 day
                                         String moodStr = arr.get(f).toString();
                                         moodTempVal = 0;
 
@@ -111,7 +111,7 @@ public class ResultsPageActivity extends AppCompatActivity {
                                     break;
                                 }
                                 case "tempo": {
-                                    for(int f = 0; f < arr.length(); f++) {
+                                    for(int f = 0; f < arr.length(); f++) { // Cycling over all tempos inserted into 1 day
                                         float dataVal = Float.valueOf(arr.get(f).toString());
                                         tempo += dataVal;
                                         tempoCount++;
@@ -119,7 +119,7 @@ public class ResultsPageActivity extends AppCompatActivity {
                                     break;
                                 }
                                 case "fuel": {
-                                    for(int f = 0; f < arr.length(); f++) {
+                                    for(int f = 0; f < arr.length(); f++) { // Cycling over all fuels inserted into 1 day
                                         float fuelVal = Float.valueOf(arr.get(f).toString());
                                         fuel += fuelVal;
                                         fuelCount++;
@@ -130,12 +130,12 @@ public class ResultsPageActivity extends AppCompatActivity {
                         }
 
                         mood = mood / moodCount;
-                        tempo = (tempo / tempoCount) / 100 * 8;
-                        fuel = (fuel / fuelCount) / 100 * 8;
+                        tempo = (tempo / tempoCount) / 100 * 8; // "tempo / tempoCount" part is to even all insertions & "/ 100 * 8" is to scale value to mood 1-8 vals, so it won't be stretched long by this values.
+                        fuel = (fuel / fuelCount) / 100 * 8; // "fuel / fuelCount" part is to even all insertions & "/ 100 * 8" is to scale value to mood 1-8 vals, so it won't be stretched long by this values.
 
-                        float moodOffset = dayCount + 5f;
-                        float tempoOffset = moodOffset + 5f;
-                        float fuelOffset = tempoOffset + 5f;
+                        float moodOffset = dayCount + 2.5f;
+                        float tempoOffset = moodOffset + 2.5f;
+                        float fuelOffset = tempoOffset + 2.5f;
 
                         Moods.add(new BarEntry(moodOffset, mood));
                         Tempos.add(new BarEntry(tempoOffset, tempo));
