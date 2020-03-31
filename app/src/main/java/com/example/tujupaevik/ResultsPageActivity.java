@@ -67,7 +67,6 @@ public class ResultsPageActivity extends AppCompatActivity {
 
                     while (days.hasNext()) {
                         String day = days.next();
-                        //text.append("DAY "+day+" \n");
                         Days.add(day);
                         dayCount++;
                         JSONObject dayData = fullData.getJSONObject(day);
@@ -84,7 +83,6 @@ public class ResultsPageActivity extends AppCompatActivity {
 
                         while (dayDataKeys.hasNext()) {
                             String dayProperty = dayDataKeys.next();
-                            //text.append("DAY PROP ["+dayProperty+"] \n");
                             JSONArray arr = (JSONArray) dayData.get(dayProperty);
 
                             switch (dayProperty) {
@@ -103,7 +101,6 @@ public class ResultsPageActivity extends AppCompatActivity {
                                             case "happy":   { moodTempVal += 7; moodCount++; break; }
                                             case "excited": { moodTempVal += 8; moodCount++; break; }
                                         }
-
                                         mood += Float.valueOf(moodTempVal);
                                     }
                                     break;
@@ -111,7 +108,6 @@ public class ResultsPageActivity extends AppCompatActivity {
                                 case "tempo": {
                                     for(int f = 0; f < arr.length(); f++) {
                                         float dataVal = Float.valueOf(arr.get(f).toString());
-                                        //text.append("FUEL f "+f+" VAL x = "+fuelVal+" \n");
                                         tempo += dataVal;
                                         tempoCount++;
                                     }
@@ -120,28 +116,27 @@ public class ResultsPageActivity extends AppCompatActivity {
                                 case "fuel": {
                                     for(int f = 0; f < arr.length(); f++) {
                                         float fuelVal = Float.valueOf(arr.get(f).toString());
-                                        //text.append("FUEL f "+f+" VAL x = "+fuelVal+" \n");
                                         fuel += fuelVal;
                                         fuelCount++;
                                     }
                                     break;
                                 }
                             }
-
-                            //text.append("MOOD VAL ["+mood+"] \n");
-                           //text.append("TEMPO VAL ["+tempo+"] \n");
-                            //text.append("FUEL VAL ["+fuel+"] \n");
-
-                            mood = mood / moodCount;
-                            tempo = tempo / tempoCount;
-                            fuel = fuel / fuelCount;
-
-                            int offset = dayCount * 2;
-
-                            Moods.add(new BarEntry(offset, mood));
-                            Tempos.add(new BarEntry(offset+1, tempo));
-                            Fuels.add(new BarEntry(offset+2, fuel));
                         }
+
+                        mood = mood / moodCount;
+                        tempo = tempo / tempoCount;
+                        fuel = fuel / fuelCount;
+
+                        float moodOffset = dayCount * 2;
+                        float tempoOffset = moodOffset + 0.3f;
+                        float fuelOffset = tempoOffset + 0.3f;
+
+                        //text.append("daycount "+dayCount+" mo "+moodOffset+" to "+tempoOffset+" fo "+fuelOffset+"\n");
+
+                        Moods.add(new BarEntry(moodOffset, mood));
+                        Tempos.add(new BarEntry(tempoOffset, tempo));
+                        Fuels.add(new BarEntry(fuelOffset, fuel));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -158,21 +153,28 @@ public class ResultsPageActivity extends AppCompatActivity {
         tv.setText(text.toString());
 
         BarDataSet moodBarDataSet = new BarDataSet(Moods, "Tuju");
-        BarDataSet tempoBarDataSet = new BarDataSet(Moods, "Tempo");
-        BarDataSet energyBarDataSet = new BarDataSet(Moods, "Energia");
+        BarDataSet tempoBarDataSet = new BarDataSet(Tempos, "Tempo");
+        BarDataSet energyBarDataSet = new BarDataSet(Fuels, "Energia");
+
         moodBarDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         tempoBarDataSet.setColors(ColorTemplate.PASTEL_COLORS);
         energyBarDataSet.setColors(ColorTemplate.LIBERTY_COLORS);
+
+        moodBarDataSet.setFormLineWidth(2);
+        tempoBarDataSet.setFormLineWidth(2);
+        moodBarDataSet.setFormLineWidth(3);
 
         ArrayList<IBarDataSet> datasets = new ArrayList<>();
         datasets.add(moodBarDataSet);
         datasets.add(tempoBarDataSet);
         datasets.add(energyBarDataSet);
 
-        chart.animateY(1000);
+        chart.animateY(500);
+
         Description desc = new Description();
         desc.setText("Sisestatud tujud");
         chart.setDescription(desc);
+
         BarData fullStats = new BarData(datasets);
         chart.setData(fullStats);
     }
