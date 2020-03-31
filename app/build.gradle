@@ -34,6 +34,7 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.0.0'
     implementation 'pl.pawelkleczkowski.customgauge:CustomGauge:1.0.4'
     implementation 'com.github.marcinmoskala:ArcSeekBar:0.31'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
