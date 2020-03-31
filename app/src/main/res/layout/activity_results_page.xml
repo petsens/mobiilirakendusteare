@@ -19,7 +19,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#18314F"
+        android:textColor="@color/colorPrimary"
         android:maxWidth="300dp"
         android:gravity="center_horizontal"
         android:textSize="36sp" />
@@ -47,7 +47,7 @@
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:textSize="24sp"
-        android:textColor="#D6E3FC"/>
+        android:textColor="@color/colorBtnText"/>
 
     <TextView
         android:id="@+id/textView7"

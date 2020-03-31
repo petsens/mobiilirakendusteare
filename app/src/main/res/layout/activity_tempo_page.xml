@@ -29,7 +29,7 @@
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="#18314F"/>
+        android:textColor="@color/colorPrimary"/>
 
     <Button
         android:id="@+id/tempoSubBtn"
@@ -43,7 +43,7 @@
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:text="@string/submitBtnText"
-        android:textColor="#D6E3FC"
+        android:textColor="@color/colorBtnText"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
