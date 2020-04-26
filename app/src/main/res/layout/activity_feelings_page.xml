@@ -17,10 +17,10 @@
         android:layout_marginEnd="80dp"
         android:layout_marginRight="80dp"
         android:fontFamily="@font/montserrat_bold"
+        android:gravity="center_horizontal"
         android:maxWidth="300dp"
         android:text="@string/feelingsTitle"
         android:textAlignment="center"
-        android:gravity="center_horizontal"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +35,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -44,7 +44,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <Button
         android:id="@+id/button9"
@@ -52,7 +52,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="11dp"
         android:layout_marginLeft="11dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/button"
@@ -64,7 +64,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/button13"
         app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 
     <Button
         android:id="@+id/button10"
@@ -72,7 +72,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -81,7 +81,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
 
     <Button
         android:id="@+id/button3"
@@ -89,7 +89,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="19dp"
         android:layout_marginRight="19dp"
         android:background="@drawable/button"
@@ -101,13 +101,13 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/button7"
         app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button13"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="410dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -118,13 +118,13 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button12" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="95dp"
         android:layout_height="32dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -135,15 +135,15 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -152,13 +152,13 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="157dp"
         android:layout_height="32dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -169,13 +169,13 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="175dp"
         android:layout_height="32dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -186,7 +186,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
         android:id="@+id/button"
@@ -194,7 +194,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="172dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -203,7 +203,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <Button
         android:id="@+id/button2"
@@ -211,7 +211,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -220,7 +220,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
 
     <Button
         android:id="@+id/button5"
@@ -228,7 +228,7 @@
         android:layout_height="32dp"
         android:layout_marginStart="33dp"
         android:layout_marginLeft="33dp"
-        android:layout_marginTop="228dp"
+        android:layout_marginTop="33dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="setMoodState"
@@ -237,13 +237,13 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <Button
         android:id="@+id/button14"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="468dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -254,13 +254,13 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button13" />
 
     <Button
         android:id="@+id/button12"
         android:layout_width="130dp"
         android:layout_height="32dp"
-        android:layout_marginTop="348dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="33dp"
         android:layout_marginRight="33dp"
         android:background="@drawable/button"
@@ -271,7 +271,7 @@
         android:textColor="@color/colorBtnText"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
 
     <EditText
         android:id="@+id/editText"
@@ -279,16 +279,17 @@
         android:layout_height="50dp"
         android:layout_marginStart="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="564dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:ems="10"
         android:gravity="start|top"
-        android:hint="Kirjutan ise, et miks..."
+        android:autofillHints="@string/write_why"
+        android:hint="@string/write_why"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/button10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

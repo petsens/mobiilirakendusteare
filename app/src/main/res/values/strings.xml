@@ -28,8 +28,8 @@
     <string name="imoved">Liikusin</string>
     <string name="gotFeedback">Sain tagasisidet</string>
     <string name="wellRested">Puhkasin hästi</string>
-    <string name="finishedSomething">Sain asja valmis</string>
-    <string name="confident">Olen endas kindel</string>
+    <string name="finishedSomething">Sain tehtud</string>
+    <string name="confident">Olen enesekindel</string>
     <string name="fighting">Tüli</string>
     <string name="lonely">Olen üksi</string>
     <string name="badWeather">Halb ilm</string>
@@ -37,11 +37,12 @@
     <string name="insulted">Öeldi halvasti</string>
     <string name="badDream">Halb uni</string>
     <string name="tired">Väsimus</string>
-    <string name="myInput">Kirjutan ise, miks...</string>
+    <string name="myInput">Kirjutan ise, miks</string>
 
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="write_why">Kirjutan ise, miks</string>
 </resources>
