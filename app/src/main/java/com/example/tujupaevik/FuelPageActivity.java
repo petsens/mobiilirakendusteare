@@ -47,6 +47,11 @@ public class FuelPageActivity extends AppCompatActivity {
     }
 
     public void openResultsPage(View v) throws IOException, JSONException {
+
+        if (energyData == null){
+            energyData = "0";
+        }
+
         SaveTodaysFuel(energyData);
         Intent intent = new Intent(this, ResultsPageActivity.class);
         startActivity(intent);

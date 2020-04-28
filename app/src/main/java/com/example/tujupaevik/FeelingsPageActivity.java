@@ -29,6 +29,11 @@ public class FeelingsPageActivity extends AppCompatActivity {
 
     public void setMoodState(View v) {
         String moodReason = v.getTag().toString();
+
+        if (moodReason == null){
+            moodReason = "Ma ei tea";
+        }
+
         SaveTodaysMoodReason(moodReason);
         openTempoPage();
     }

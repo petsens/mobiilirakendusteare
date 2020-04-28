@@ -1,9 +1,11 @@
 package com.example.tujupaevik;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Debug;
 import android.util.Log;
@@ -14,9 +16,11 @@ import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.Description;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IAxisValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
@@ -31,6 +35,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public class MoodPageStatistics1<value> extends AppCompatActivity {
 
@@ -51,6 +57,7 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void displayData() {
         String fileName = "tujuStorage.json";
         File file = new File(this.getFilesDir(), fileName);
@@ -60,7 +67,8 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
         BarChart chart = findViewById(R.id.statchart);
         int dayCount = 0;
         ArrayList Moods = new ArrayList();
-        final ArrayList<String> Days = new ArrayList<>();
+        final List<String> Days = new ArrayList<>();
+
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -73,8 +81,8 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
 
                     while (days.hasNext()) { // Data inserted into 1 day.
                         String day = days.next();
-                        Days.add(day);
                         dayCount++;
+                        Days.add(day);
                         JSONObject dayData = fullData.getJSONObject(day);
                         Iterator<String> dayDataKeys = dayData.keys();
 
@@ -112,7 +120,7 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
 
                         mood = mood / moodCount;
 
-                        float moodOffset = dayCount + 2.5f;
+                        float moodOffset = dayCount;
 
                         Moods.add(new BarEntry(moodOffset, mood));
                     }
@@ -127,6 +135,19 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
         catch (IOException e) {
             e.printStackTrace();
         }
+        String[] Daystemp = new String[dayCount + 2];
+        final int size = Days.size();
+        for (int i = 0; i < size; i++)
+        {
+            String day = Days.get(i);
+            Daystemp[i + 1]=day;
+            //do something with i
+        }
+
+        String[] YAxisLabels = new String[]{
+                "", "Vihane", "Hirmunud", "Kurb", "Närviline", "Rahulik", "Puhanud", "Rõõmus", "Elevil"
+        };
+
         TextView tv = findViewById(R.id.textView8);
         tv.setText(text.toString());
 
@@ -138,7 +159,7 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
 
         moodBarDataSet.setColors(new int[] { R.color.moodBar});
 
-        moodBarDataSet.setFormLineWidth(3);
+        //moodBarDataSet.setFormLineWidth(2);
 
         ArrayList<IBarDataSet> datasets = new ArrayList<>();
         datasets.add(moodBarDataSet);
@@ -153,13 +174,22 @@ public class MoodPageStatistics1<value> extends AppCompatActivity {
         chart.setData(fullStats);
 
         XAxis xAxis = chart.getXAxis();
+        xAxis.setDrawLabels(true);
+        xAxis.setAxisMinimum(1);
+        xAxis.setAxisMaximum(dayCount);
+        xAxis.setLabelCount(dayCount, true);
+        xAxis.setGranularity(1f); // restrict interval to 1 (minimum)
+        xAxis.setGranularityEnabled(true);
+        xAxis.setValueFormatter(new MyXAxisValueFormatter(Daystemp));
 
-        xAxis.setValueFormatter(new ValueFormatter() {
-            @Override
-            public String getFormattedValue(float value, AxisBase axis) {
-                return Days.get((int) value);
-            }
-        });
+        YAxis yAxis = chart.getAxisLeft();
+        yAxis.setDrawLabels(true);
+        yAxis.setAxisMinimum(1);
+        yAxis.setAxisMaximum(8);
+        yAxis.setLabelCount(9, true);
+        yAxis.setGranularity(1f); // restrict interval to 1 (minimum)
+        yAxis.setGranularityEnabled(true);
+        yAxis.setValueFormatter(new MyYAxisValueFormatter(YAxisLabels));
 
         //xAxis.setValueFormatter(new DaysValueFormatter());
 
