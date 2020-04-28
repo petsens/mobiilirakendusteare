@@ -33,6 +33,11 @@ public class TempoPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openFuelPage();
+
+                if (tempoStr == null){
+                    tempoStr = "0";
+                }
+
                 SaveTodaysTempo(tempoStr);
             }
         });
