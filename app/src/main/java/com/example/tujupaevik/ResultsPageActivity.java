@@ -53,6 +53,11 @@ public class ResultsPageActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openTempoPage(View v) {
+        Intent intent = new Intent(this, TempoPageStatistics.class);
+        startActivity(intent);
+    }
+
     private void displayData() {
         String fileName = "tujuStorage.json";
         File file = new File(this.getFilesDir(), fileName);

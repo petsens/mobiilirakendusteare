@@ -22,10 +22,12 @@
     <string name="scaredMoodBtnText">Hirmul</string>
     <string name="calmMoodBtnText">Rahulik</string>
     <string name="restedMoodBtnText">Puhanud</string>
+    <string name="moodsBtnText">Tujud</string>
+    <string name="temposBtnText">Tempod</string>
 
     <string name="accomplishment">Saavutus</string>
     <string name="withFriends">Koos sõpradega</string>
-    <string name="imoved">Liikusin</string>
+    <string name="iMoved">Liikusin</string>
     <string name="gotFeedback">Sain tagasisidet</string>
     <string name="wellRested">Puhkasin hästi</string>
     <string name="finishedSomething">Sain tehtud</string>
@@ -45,4 +47,8 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="write_why">Kirjutan ise, miks</string>
+    <string name="text_tempo_statistics">Tempode statistika</string>
+    <string name="text_mood_statistics">Tujude statistika</string>
+    <string name="homePageBtnText">Avalehele</string>
+    <string name="statisticsBtnText">Statistika</string>
 </resources>

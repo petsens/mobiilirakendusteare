@@ -35,35 +35,51 @@
 
     <Button
         android:id="@+id/resultsHomeBtn"
-        android:layout_width="180dp"
+        android:layout_width="100dp"
         android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginBottom="56dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="openHomePage"
         android:text="@string/homeBtnText"
         android:textColor="@color/colorBtnText"
-        android:textSize="24sp"
+        android:autoSizeMinTextSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/resultsMoodBtn"
-        android:layout_width="180dp"
+        android:layout_width="100dp"
         android:layout_height="51dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="56dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
         android:onClick="openStatisticsPage"
-        android:text="Tujud"
+        android:text="@string/moodsBtnText"
         android:textColor="@color/colorBtnText"
-        android:textSize="24sp"
+        android:autoSizeMinTextSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.93"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonTempoBtn"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/button"
+        android:fontFamily="@font/montserrat"
+        android:onClick="openTempoPage"
+        android:text="@string/temposBtnText"
+        android:textColor="@color/colorBtnText"
+        android:autoSizeMinTextSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/resultsMoodBtn"
+        app:layout_constraintStart_toEndOf="@+id/resultsHomeBtn" />
 
     <TextView
         android:id="@+id/textView7"
@@ -74,4 +90,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
