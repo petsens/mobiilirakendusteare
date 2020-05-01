@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/moodSelect"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
@@ -35,10 +35,10 @@
         android:layout_marginBottom="66dp"
         android:background="@drawable/button"
         android:fontFamily="@font/montserrat"
-        android:textColor="@color/colorBtnText"
         android:onClick="onMoodSelect"
         android:tag="angry"
         android:text="@string/angryMoodBtnText"
+        android:textColor="@color/colorBtnText"
 
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/moodSelect2"
@@ -47,7 +47,7 @@
 
     <Button
         android:id="@+id/moodSelect2"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
@@ -66,7 +66,7 @@
 
     <Button
         android:id="@+id/moodSelect3"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="45dp"
         android:layout_marginEnd="45dp"
@@ -85,7 +85,7 @@
 
     <Button
         android:id="@+id/moodSelect4"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
@@ -104,7 +104,7 @@
 
     <Button
         android:id="@+id/moodSelect5"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
@@ -123,7 +123,7 @@
 
     <Button
         android:id="@+id/moodSelect6"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="45dp"
@@ -142,7 +142,7 @@
 
     <Button
         android:id="@+id/moodSelect7"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginTop="66dp"
         android:layout_marginEnd="45dp"
@@ -159,7 +159,7 @@
 
     <Button
         android:id="@+id/moodSelect8"
-        android:layout_width="140dp"
+        android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginStart="45dp"
         android:layout_marginLeft="45dp"
