@@ -1,6 +1,8 @@
 # Tujupäevik
   
 ## Autorid: Caupo Helvik, Marko Rillo, Peeter Roop, Priit Laupa, Tatjana Kuznetsova
+## Demo video:  
+https://www.youtube.com/watch?v=-YegtPLhLp4
 
 ### Kuidas alla laadida ja käivitada:
 Hetkeseisuga ei ole saadaval installfaili, seega rakenduse kasutamiseks tuleks see repo enda arvutisse kloonida ning läbi Android Studio käivitada.
